@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_2" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 355.75 103.56">
+  <g id="Layer_3" data-name="Layer 3">
+    <g id="tutorial-bubble">
+      <path d="M343.25.5H12.5C5.9.5.5,5.9.5,12.5v55.66c0,6.6,5.4,12,12,12h11.09s5.36,9.08-7.66,15.65c0,0,18.85,1.2,33.55-15.65h293.77c6.6,0,12-5.4,12-12V12.5c0-6.6-5.4-12-12-12Z" fill="#f5ebff" stroke="#b79ac8" stroke-miterlimit="10"/>
+      <text transform="translate(32.88 34.42)" fill="#9f8ead" font-size="22"><tspan font-family="ArialNarrow, &apos;Arial Narrow&apos;"><tspan x="0" y="0">copy a song</tspan><tspan x="97.3" y="0" letter-spacing="-.01em">’</tspan><tspan x="101" y="0">s spotify link, paste it </tspan></tspan><tspan x="0" y="26.4" font-family="ArialNarrow, &apos;Arial Narrow&apos;">here and press ‘</tspan><tspan x="129.38" y="26.4" font-family="ArialNarrow-Bold, &apos;Arial Narrow&apos;" font-weight="700">load music</tspan><tspan x="223.63" y="26.4" font-family="ArialNarrow, &apos;Arial Narrow&apos;">’!</tspan></text>
+    </g>
+  </g>
+</svg>

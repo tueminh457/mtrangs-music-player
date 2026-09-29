@@ -1,0 +1,621 @@
+@font-face{
+  font-family:"ArialNarrow";
+  src:url("assets/arialnarrow.ttf") format("truetype");
+  font-weight:400; font-style:normal; font-display:swap;
+}
+@font-face{
+  font-family:"ArialNarrow-Bold";
+  src:url("assets/arialnarrow_bold.ttf") format("truetype");
+  font-weight:700; font-style:normal; font-display:swap;
+}
+@font-face{
+  font-family:"Sabrina";
+  src:url("assets/SABRINA_.TTF") format("truetype");
+  font-weight:400; font-style:normal; font-display:swap;
+}
+
+
+:root{
+  --font-ui:"ArialNarrow", "Arial Narrow", Arial, sans-serif;
+  --font-ui-bold:"ArialNarrow-Bold", "Arial Narrow", Arial, sans-serif;
+  --font-title:"Sabrina", cursive;
+}
+
+/* lock the page: no scrolling, no mobile rubber-band bounce */
+html, body{
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  height: 100dvh;            /* real visible height on phones (ignores the URL bar) */
+  overflow: hidden;
+  overscroll-behavior: none;
+}
+
+
+/*=========LOG IN PAGE================*/
+.sky-bg1{
+  position: fixed;
+  inset: 0;                  /* top/right/bottom/left = 0 */
+  width: 100%;
+  height: 100%;
+  object-fit: cover;         /* fills the screen, crops edges instead of stretching */
+  pointer-events: none;
+  z-index: 0;    
+}
+
+.pfp{
+  position: fixed;
+  left: 50%;
+  top: 30%;
+  transform: translate(-50%, -50%);
+  width: clamp(100px, 15vw, 300px);
+  height: auto;
+  pointer-events: none;
+  z-index: 1;    
+}
+
+.logging-in{
+  position: fixed;
+  left: 50%;
+  top: 40%;
+  transform: translate(-50%, -50%);
+  width: clamp(100px, 15vw, 300px);
+  height: auto;
+  pointer-events: none;
+  z-index: 2;    
+}
+
+.password{
+  position: fixed;
+  left: 50%;
+  top: 70%;
+  transform: translate(-50%, -50%);
+  width: clamp(250px, 28vw, 500px);
+  height: auto;
+  pointer-events: none;
+  z-index: 3;    
+}
+
+.password-input{
+  position: fixed;
+  left: 50%;
+  top: 70%;
+  transform: translate(-50%, -50%);
+  width: clamp(250px, 28vw, 500px);
+  height: calc(clamp(250px, 28vw, 500px) * 126.72 / 660.96);
+  box-sizing: border-box;
+  padding: 0 8%;
+  border: 0;
+  outline: 0;
+  background: transparent;
+  font-family: var(--font-ui);
+  font-size: clamp(16px, 2vw, 26px);
+  letter-spacing: 0.15em;
+  color: #8d7d9a;
+  pointer-events: auto;
+  z-index: 5;
+}
+
+.enter-btn{
+  position: fixed;
+  left: 67%;
+  top: 70%;
+  transform: translate(-50%, -50%);
+  width: clamp(20px, 4vw, 100px);
+  height: auto;
+  cursor: pointer;
+  pointer-events: auto;
+  z-index: 6;
+  transition: transform 0.2s ease, filter 0.2s ease;
+}
+
+.enter-btn:hover,
+.enter-btn:focus-visible{
+  transform: translate(-50%, -50%) scale(1.12);
+  outline: none;
+}
+
+.enter-btn:active{
+  transform: translate(-50%, -50%) scale(0.95);
+}
+
+.log-in-page p{
+  font-family: var(--font-ui);
+  color: #ffffff;
+  filter: drop-shadow(0px 2px 4px #494949);
+  font-size: clamp(13px, 2vw, 23px);
+  text-align: center;
+  pointer-events: none;
+}
+
+.log-in-page .logging-in{
+  position: fixed;
+  left: 50%;
+  top: 45%;
+  transform: translate(-50%, -50%);
+  font-family: var(--font-ui-bold);
+  font-size: clamp(20px, 8vw, 40px);
+}
+
+.log-in-page .user{
+  position: fixed;
+  left: 50%;
+  top: 54%;
+  transform: translate(-50%, -50%);
+  font-size: clamp(15px, 5vw, 27px);
+}
+
+.log-in-page .hint{
+  position: fixed;
+  left: 50%;
+  top: 75%;
+  transform: translate(-50%, -50%);
+  font-size: clamp(10px, 3vw, 20px);
+}
+
+/*=========MUSIC PLAYER PAGE================*/
+.app{
+  position: fixed;
+  left: 8%;
+  top: 15%;
+  transform: translate(-50%, -50%);
+  width: clamp(50px, 8vw, 100px);
+  cursor: pointer;
+  z-index: 1;
+  transition: transform 0.2s ease, filter 0.2s ease;
+  -webkit-tap-highlight-color: transparent;
+  user-select: none;
+  -webkit-user-drag: none;
+}
+.app:hover{
+  transform: translate(-50%, -50%) scale(1.1);
+  filter: brightness(1.08) drop-shadow(0 0 8px rgba(255, 255, 255, 0.9));
+}
+.app:active{
+  transform: translate(-50%, -50%) scale(0.95);
+}
+
+/* the player stays hidden until the app icon is clicked */
+.music-player{ display: none; }
+.music-player.open{ display: block; }
+
+.sky-bg{
+  position: fixed;
+  inset: 0;                  /* top/right/bottom/left = 0 */
+  width: 100%;
+  height: 100%;
+  object-fit: cover;         /* fills the screen, crops edges instead of stretching */
+  pointer-events: none;
+  z-index: 0;    
+}
+
+.window{
+  position: fixed;
+  inset: 0;                  /* top/right/bottom/left = 0 */
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 1;    
+}
+
+.window-screen{
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 90vw;
+  height: 90vh;
+  pointer-events: none;
+  z-index: 2;    
+}
+
+.window-small{
+  position: fixed;
+  left: 50%;
+  top: 45%;
+  transform: translate(-50%, -50%);
+  width: 50vw;
+  height: auto;
+  pointer-events: none;
+  z-index: 3;   
+  mix-blend-mode: soft-light; 
+  opacity: 0.5;
+}
+
+.window-overlay{
+  position: fixed;
+  left: 65%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width:75vw;
+  height: 75vh;
+  pointer-events: none;
+  z-index: 4;    
+  mix-blend-mode: overlay;
+  opacity: 0.5;
+}
+
+.window p{
+  position: fixed;
+  left: 33%;
+  top: 10%;
+  transform: translate(-50%, -50%);
+  width: 80vw;
+  height: auto;
+  pointer-events: none;
+  z-index: 4;    
+  font-family: var(--font-ui);
+  font-size: clamp(13px, 2vw, 23px);
+  text-align: center;
+  color: #8d7d9a;
+}
+
+.buttons{
+  position: fixed;
+  inset: 0;
+  z-index: 5;
+  pointer-events: none;   /* let clicks/hover pass through the empty area */
+}
+
+.buttons img{
+  position: absolute;
+  left: 50%;
+  top: 82%;
+  transform: translate(-50%, -50%);
+  width: clamp(25px, 5vw, 60px);
+  height: auto;
+  object-fit: contain;       /* keeps the SVG's proportions */
+  cursor: pointer;
+  pointer-events: auto;
+}
+
+.buttons .play-btn     { left: 33%; }
+.buttons .pause-btn    { left: 33%; }
+.buttons .next-btn     { left: 38%; }
+.buttons .previous-btn { left: 28%; }
+
+.buttons .speaker-btn   { width: clamp(15px, 3vw, 40px); left: 43%; }
+.buttons .volume-btn   {
+  width: clamp(50px, 7vw, 90px);
+  left: 48%;
+  padding: 10px 0;          /* taller grab area, art stays the same size */
+  cursor: ew-resize;
+  touch-action: none;       /* let touch drag the slider instead of scrolling */
+}
+
+.load{
+  position: fixed;
+  inset: 0;
+  z-index: 5;
+  pointer-events: none;   /* was covering the transport buttons */
+}
+
+.load-music{
+  position: absolute;
+  left: 65%;
+  top: 85%;
+  transform: translate(-50%, -50%);
+  width: clamp(100px, 20vw, 300px);
+  height: auto;
+  object-fit: contain;       /* keeps the SVG's proportions */
+  cursor: pointer;
+  pointer-events: auto;
+}
+
+.input-link{
+  position: absolute;
+  left: 65%;
+  top: 78%;
+  transform: translate(-50%, -50%);
+  width: clamp(100px, 20vw, 300px);
+  height: auto;
+  object-fit: contain;
+}
+
+.link-input{
+  position: absolute;
+  left: 65%;
+  top: 78%;
+  transform: translate(-50%, -50%);
+  width: clamp(100px, 20vw, 300px);
+  height: calc(clamp(100px, 20vw, 300px) * 52.43 / 402.63);
+  box-sizing: border-box;
+  padding: 0 6%;
+  border: 0;
+  outline: 0;
+  background: transparent;
+  font-family: var(--font-ui);
+  font-size: clamp(10px, 1.5vw, 20px);
+  color: #8d7d9a;
+  text-overflow: ellipsis;
+  pointer-events: auto;
+}
+
+.tutorial{
+  position: fixed;
+  object-fit: contain;       /* keeps the SVG's proportions */
+  z-index: 10;    
+}
+
+.tutorial-bubble{
+  pointer-events: none;      /* never steal clicks from the link field */
+  position: fixed;
+  left: 82%;
+  top: 72%;
+  transform: translate(-50%, -50%);
+  width: clamp(100px, 20vw, 300px);
+  height: auto;
+  filter: drop-shadow(0px 2px 4px #989797);
+}
+
+.close-tutorial{
+  position: fixed;
+  left: 92%;
+  top: 66%;
+  transform: translate(-50%, -50%);
+  width: clamp(10px, 10vw, 30px);
+  height: auto;
+  z-index: 11;
+  filter: drop-shadow(0px 2px 4px #989797);
+  cursor: pointer;
+}
+
+.queue{
+  position: fixed;
+  height: auto;
+  z-index: 8;    
+}
+
+.queue-bg{
+  position: fixed;
+  left: 64%;
+  top: 45%;
+  transform: translate(-50%, -50%);
+  width: clamp(90px, 20vw, 260px);
+  height: auto;
+  pointer-events: none;
+}
+
+/* queue list: rows sit where queue-song1/2/3 used to (first row centred at
+   30vh, 6vh apart) and scroll if there are more than fit inside queue-bg */
+:root{
+  --song-w: clamp(90px, 20vw, 260px);
+  --song-h: calc(var(--song-w) * 55.9 / 364.95);
+  --list-top: calc(30vh - var(--song-h) / 2 - 8px);
+}
+
+.queue-list{
+  position: fixed;
+  left: 64%;
+  top: var(--list-top);
+  transform: translateX(-50%);
+  width: calc(var(--song-w) + 16px);
+  max-height: calc(45vh + var(--song-w) * 0.697 - var(--list-top) - var(--song-w) * 0.05);
+  box-sizing: border-box;
+  padding: 8px;
+  overflow-y: auto;
+  overflow-x: hidden;
+  scrollbar-width: none;
+}
+.queue-list::-webkit-scrollbar{ display: none; }
+
+.queue-row{
+  position: relative;
+  width: var(--song-w);
+  margin: 0 0 calc(6vh - var(--song-h));
+}
+
+.queue-item{
+  display: block;
+  width: var(--song-w);
+  height: auto;
+  cursor: pointer;
+}
+
+/* song title over the row artwork; long titles scroll left forever */
+.queue-title{
+  position: absolute;
+  left: 19.47%;             /* where the artwork's own title used to start */
+  width: 66.9%;             /* stops before the x button */
+  top: 0;
+  height: 100%;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  padding-bottom: calc(var(--song-w) * 3.6 / 364.95);   /* baseline matches the artwork */
+  box-sizing: border-box;
+  pointer-events: none;
+  color: #fff;
+  opacity: 0.7;
+  font-family: var(--font-ui);
+  font-size: calc(var(--song-w) * 25 / 364.95);
+  line-height: 1;
+  white-space: nowrap;
+}
+.queue-title-track{
+  display: inline-flex;
+  flex: none;
+}
+.queue-title-track.scrolling .queue-title-text{
+  padding-right: 2em;       /* gap between the end and the repeat */
+}
+.queue-title-track.scrolling{
+  animation: queue-marquee var(--dur, 10s) linear infinite;
+  will-change: transform;
+}
+@keyframes queue-marquee{
+  from{ transform: translateX(0); }
+  to{   transform: translateX(-50%); }
+}
+
+/* x button: removes the song from the queue */
+.queue-remove{
+  position: absolute;
+  right: 4%;
+  top: 50%;
+  transform: translateY(-50%);
+  width: calc(var(--song-h) * 0.5);
+  height: calc(var(--song-h) * 0.5);
+  min-width: 14px;
+  min-height: 14px;
+  padding: 0;
+  border: 0;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.35);
+  color: #fff;
+  font: bold calc(var(--song-h) * 0.4) / 1 Arial, sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 1;
+  -webkit-tap-highlight-color: transparent;
+}
+.queue-remove:hover{ background: rgba(255, 255, 255, 0.6); }
+.queue-remove:active{ background: rgba(255, 255, 255, 0.8); }
+
+.music{
+  position: fixed;
+  height: auto;
+  z-index: 7; 
+}
+
+.music-bg{
+  position: fixed;
+  left: 40%;
+  top: 45%;
+  transform: translate(-50%, -50%);
+  width: clamp(200px, 27vw, 500px);
+  height: auto;
+  pointer-events: none;
+  z-index: 7; 
+}
+
+.title-placeholder{
+  position: fixed;
+  left: 40%;
+  top: 30%;
+  transform: translate(-50%, -50%);
+  width: clamp(100px, 10vw, 350px);
+  height: auto;
+  aspect-ratio: 425.71 / 248.61;
+  overflow: visible;
+  pointer-events: none;
+  z-index: 10; 
+}
+
+.title-placeholder text{
+  font-family: "Sabrina", cursive;
+  fill: #9c80bc;
+}
+
+.decor{
+  position: fixed;              /* left / top / width are set by script.js */
+  transform: translate(-50%, -50%);
+  height: auto;
+  pointer-events: none;
+  z-index: 9; 
+}
+
+.cd{
+  position: fixed;
+  left: 40%;
+  top: 45%;
+  transform: translate(-50%, -50%);
+  width: clamp(250px, 25vw, 500px);
+  height: auto;
+  pointer-events: none;
+  z-index: 8; 
+}
+
+/* CD spins while a song plays; pausing freezes it at its current angle */
+@keyframes cd-spin{
+  from{ transform: translate(-50%, -50%) rotate(0deg); }
+  to{   transform: translate(-50%, -50%) rotate(360deg); }
+}
+.cd{
+  transform-origin: center center;
+  animation: cd-spin 4s linear infinite;
+  animation-play-state: paused;
+}
+.cd.spinning{ animation-play-state: running; }
+
+/* ---------- hover / press effects ---------- */
+/* Every element below is centred with translate(-50%, -50%), so the
+   hover/active states must repeat that translate and add the scale. */
+
+.buttons .play-btn,
+.buttons .pause-btn,
+.buttons .previous-btn,
+.buttons .next-btn,
+.load-music,
+.close-tutorial,
+.queue-row{
+  transition: transform 0.15s ease, filter 0.15s ease;
+  -webkit-tap-highlight-color: transparent;
+  user-select: none;
+  -webkit-user-drag: none;
+}
+
+/* play / pause / previous / next */
+.buttons .play-btn:hover,
+.buttons .pause-btn:hover,
+.buttons .previous-btn:hover,
+.buttons .next-btn:hover{
+  filter: brightness(0.85);
+}
+.buttons .play-btn:active,
+.buttons .pause-btn:active,
+.buttons .previous-btn:active,
+.buttons .next-btn:active{
+  filter: brightness(0.75);
+}
+
+/* load music */
+.load-music:hover{
+  filter: brightness(0.85);
+}
+.load-music:active{
+  filter: brightness(0.75);
+}
+
+/* close tutorial (keeps its base drop-shadow) */
+.close-tutorial:hover{
+  filter: brightness(0.85) drop-shadow(0px 2px 4px #989797);
+}
+.close-tutorial:active{
+  filter: brightness(0.75) drop-shadow(0px 2px 4px #989797);
+}
+
+/* each song in the queue */
+.queue-row:hover{
+  transform: scale(1.05);
+  filter: brightness(1.1) drop-shadow(0 2px 5px rgba(141, 125, 154, 0.5));
+}
+.queue-row:active{
+  transform: scale(0.97);
+}
+
+/* currently playing song (set from script.js) */
+.queue-row.active{
+  filter: brightness(1.15);
+}
+.queue-row.active:hover{
+  filter: brightness(1.2) drop-shadow(0 2px 5px rgba(141, 125, 154, 0.5));
+}
+
+/* tutorial can be dismissed */
+.tutorial.hidden{ display: none; }
+
+/* previous / next with nothing to go to */
+.buttons .previous-btn.disabled,
+.buttons .next-btn.disabled,
+.buttons .previous-btn.disabled:hover,
+.buttons .next-btn.disabled:hover,
+.buttons .previous-btn.disabled:active,
+.buttons .next-btn.disabled:active{
+  transform: translate(-50%, -50%);
+  filter: grayscale(1) opacity(0.4);
+  cursor: not-allowed;
+}

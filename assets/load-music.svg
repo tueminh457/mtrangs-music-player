@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 402.63 52.43">
+  <defs>
+    <filter id="luminosity-invert" x="-2.97" y="-2.25" width="408" height="57" color-interpolation-filters="sRGB" filterUnits="userSpaceOnUse">
+      <feColorMatrix result="cm" values="-1 0 0 0 1 0 -1 0 0 1 0 0 -1 0 1 0 0 0 1 0"/>
+    </filter>
+    <mask id="mask" x="-2.97" y="-2.25" width="408" height="57" maskUnits="userSpaceOnUse">
+      <g filter="url(#luminosity-invert)">
+        <image width="408" height="57" transform="translate(-2.97 -2.25)" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAZgAAAA5CAYAAAALDD2qAAAACXBIWXMAAAsSAAALEgHS3X78AAAJFUlEQVR4nO2dWZOqyhJGP2YQ7cGO/v+/cDszi96nrJsUBXrObvfpbX8rogJQKXhyRWbW4AG4ghBCCPli/P/6BQghhDwn4T+9IY5jJEmCMAwRhiE8z4Pv+/A8D57nAcDoaDP1OSGEkK/lenUnqeRzfZR2uVxwPp/R9z2apkHTNP/q2XcLJk1T5HmO5XKJLMuQJAmiKEIQBAiCAL7vD0TjEo59Tggh5PFoybiEIlK5XC7o+x593+N8PqNtW1RVhaIoUNc16rpG27Z3P/emYOI4Rp7neHt7w2q1Qp7nyPPcCCaO45uSEan4/jgjR+EQQsjX4opaLpeL+e6WXLquQ9u2aNsWZVkayZRlif1+j6qq0HXdzfeYFUyWZViv13h7e8PLywteXl6wXC6xWCyQJAnSNEUURSZdpiVjiwYYy4RyIYSQx3ErchGxiFzO5zPO5zO6rjOpsaqqUJYliqLA8XhEmqY4Ho/Y7Xao63r2+ZOCybIMn5+f+Pj4wPv7+0gwkiaL4xhhGI7SZf+mNgO4oxxCCCHTSHTiYqrWcrlczFFHLtKapkFd1yZ6KYoCaZoiSRIkSQLP87DZbGbrM07BiFw+Pz+xXq/x/v6O19fXgWAkionj2EjGlSqTc4DFf0IIeRT3FvO1WKbqLm3bmuilqioTVMRxbLJWIqrNZjNZlxkJJo5jrNdrfHx8mOOcYHQUI4IJgmAQwcgRYJqMEEIejS0bLRktmOv1auRiC0ail6qqBv/z8n8uv58r/I8EIwX99/d309brtUmRrVYrY7M0TY3R7in2A2OhMCVGCCFfi50yu3fkWNu2psBf1zWyLENZloMgwvM8XK9XU6sREblSZQPBpGk6KOi/vr6ayEU+l6HKaZoOBCN1mKkiP4cqE0LIn8cu9E8V+XWBX4Yny2hhHbmIkKROUxQFFovFbcHkeY7VamUEY7fVauVMkblGkWmx6CiFciGEkD+LloykxlxRjEimaRpEUTSQi/QjcpHIZblc4uXlBWVZjiRjBBPHMZbLpYlQdJP5L3Iu6TEZpuwaQcbIhRBCvg+3Ihldh9FBQxAE5p7L5TJIoYlgJKs1KZgkSZBlmYlO7Jbnuam9yERLSY/p1JhLLIQQQr4XrmHLIhB7wJZePkbkkue5SY9J0LHf7wfPMIIJw9BMnrRlk2WZudbjoCU9puVCCCHk+2MPvPJ9H9frFb7vG7EAGMhF6i6LxQJlWY6CkiRJBlHMQDASjdgSkXSYnMuClzpyIYQQ8vfiKm3Ycmnb1vhAe0FPWXEKxvM8BEEwSHuJSGQypf5ORy6EEEKeA3GBPQCgbVvEceyUivgiDIczX8yVhEVBEJhoxpaKbpQLIYQ8JyKZKIrQ9/0g4JBz7QMZFGA7wdcdSqfSsdw0taAlIYSQ50T+520n2Mc5LwwEIz+yl32ZWsySEELI82L7QM5djnB5YaAbvTilNpdrGX5CCCHPjThBe0CEMjW5XjNKkdmSsRvnuBBCyM/A9oKOXub2/hJGEYxLMq69XQghhDw/Uj7RbtDCmZtcPykYWzZTy78QQgh5bmyh3Bt8DFJkcpxrhBBCfg72epJz27DMpsimOpl6GCGEkOdnTixzThilyOY6J4QQQoD7diceRTBzO05yciUhhPxMptJgU58BEykyQggh5HcZCUZvSkMIIYQAw/1jpr6z8W/9SG+veblcvuI9CSGE/OXYvnD5w5kis7fTJIQQ8nOxd7+0r6eYTJG5OqFwCCHkZ2J7wHaEPgr+rZt1ioyCIYSQn8WUD+Rcf2YzqsG4brQ7oGQIIeRnoHe21O16vaLv+9ngYzKCcXWoOyaEEPLcuHzQ9/3gaGe5NKMIRm7UnehrpskIIeRn4JJL3/c4n88DwUy5wXd1pDuRjvSRUQwhhDw/OujQDtBu0F6wGQnG1VHXdYPOKBhCCHlutA+0B+xmZ7w0A8FoG7Vta1rXdabpTikZQgh5PuyAQwTTNM3AB13XoW3bQcpME8qJdKZvkqNuURSZ7TL1TmeEEEL+fiTY0IFG0zSD87qu0TTNSDh2BGMEI5bSnUkH0mEcxwO5yMvo3c0IIYT8feg6vJ3F0lLRcrEd0bbtoE8jmL7vB51VVYWyLLFYLFCWJeI4RhiGRibyQn3fI4qigWTmlnUmhBDy32Ov1CJykVKI+KCqKtR1jbquUZalOZdWVZXxRV3Xg2cYwWipyA1ynSSJSY0FQQDg/ym1KIrQ9735TkvG3mrTBSVECCFfx1xt3LW0i540KakxKY+IB4qiQFEUKMvSnMu1RDR29AJYgimKYtBZlmVGLmEYGhnoF0mSBF3XIQzDgWB0ykyOUxuWUTKEEPJ7zIlFF9/nJtXbpZKmaQZSOZ1OOJ1ORi46IJkVDADUdW1uPp1OSNMUSZKY1Ji8nB5V0LYtwjA0zRXF2KKhUAgh5PFo6bgWL9bRi4wEk4K9TosVRYHj8YjT6YTj8WiaCKcsSzRNM3r+QDBVVeF0OuFwOCBJkkHdBYAxnAxXS9MUcRwjiiIT5Ugt5pZkBMqGEEK+hlubgc1FL1ou8h8v0YmI5HA44HA4YL/fm3ORTdd1o2cPBNN1Hbbb7UAuIgBbLpI+i+PY/FbXYWzBiKQoGEIIeRxTG4FJmsy1qLGr/mLXYE6nE/b7PXa7HXa7Hfb7vRFNVVXOdwntD6qqwna7NSPDPM8zaTE9wkzXZygYQgj5HtwrGFcEYwtGRomVZYnj8YjD4WAEs9lssNlssN/vndEL4BAMABRFgd1uZ15K5CL5uCzLRoIRucwV+ikXQgj5M9yqv9iSkShGT7bXdRhJke33e2y3W/z69Qvb7XY0NFnjFIykyvQyMRK5yOgyXX+R6EXXYG7VXygXQgh5LPdIxjWKTJdDRDBlWZq6y2azuSkXAPAAzC4olmUZ1us1lsslVqsV8jw3crknNeYaoky5EELI47HTZa402dSS/Hq5MDtNdjgcbsoFuEMwABDHMbIsw2q1wmKxGMyN8X3fCMYWy9ywZEqGEEIey1Q9Rs7tpvd40TUZmQ9zPB5R1/VkzcXmLsEIrqjFLuBzODIhhHxPpoTjWjbGtcL+vWIR/pFgCCGEkHtxr91CCCGE/CYUDCGEkIfwPxp31YAXLaKfAAAAAElFTkSuQmCC"/>
+      </g>
+    </mask>
+  </defs>
+  <g isolation="isolate">
+    <g id="Layer_2" data-name="Layer 2">
+      <g id="Layer_3" data-name="Layer 3">
+        <g id="load-music">
+          <g id="password">
+            <g>
+              <rect x=".5" y=".5" width="401.63" height="51.43" rx="14.11" ry="14.11" fill="#cfbae2"/>
+              <rect x=".5" y=".5" width="401.63" height="51.43" rx="14.11" ry="14.11" fill="none" stroke="#b79ac8" stroke-miterlimit="10"/>
+            </g>
+            <g mask="url(#mask)">
+              <g mix-blend-mode="multiply" opacity=".5">
+                <rect x=".5" y=".5" width="401.63" height="51.43" rx="14.11" ry="14.11" fill="#a08cb5"/>
+                <rect x=".5" y=".5" width="401.63" height="51.43" rx="14.11" ry="14.11" fill="none" stroke="#a08cb5" stroke-miterlimit="10"/>
+              </g>
+            </g>
+          </g>
+          <text transform="translate(136.06 36.69)" fill="#fff" font-family="ArialNarrow, &apos;Arial Narrow&apos;" font-size="33.3"><tspan x="0" y="0">load music</tspan></text>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>

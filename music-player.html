@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>mtrang's music player</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <img class="app" src="assets/app.svg" alt="">
+  <div class="background">
+    <img class="sky-bg" src="assets/sky-bg.svg" alt="">
+  </div>
+
+  <div class="music-player">
+      
+      <div class="music">
+        <img class="music-bg" src="assets/music-bg.svg" alt="">
+        <svg class="title-placeholder" viewBox="0 0 425.71 248.61" role="img" aria-label="now playing">
+          <text id="title-l1" text-anchor="middle">go big or</text>
+          <text id="title-l2" text-anchor="middle">go home</text>
+        </svg>
+        <img class="cd" src="assets/cd.svg" alt="">
+      </div>
+
+      <div class="window">
+      <img class="window-screen" src="assets/window.svg" alt="">
+      <img class="window-small" src="assets/window-small.svg" alt="">
+      <img class="window-overlay" src="assets/window-overlay.svg" alt="">
+      <p> mtrang's music player.exe</p>
+      </div>
+
+  <div class="buttons">
+    <img class="next-btn" src="assets/next-btn.svg" alt="">
+    <img class="pause-btn" src="assets/pause-btn.svg" alt="">
+    <img class="previous-btn" src="assets/previous-btn.svg" alt="">
+    <img class="play-btn" src="assets/play-btn.svg" alt="">
+    <img class="volume-btn" src="assets/volume-btn.svg" alt="">
+    <img class="speaker-btn" src="assets/speaker.svg" alt="">
+  </div>
+
+  <div class="load">
+    <img class="load-music" src="assets/load-music.svg" alt="">
+    <img class="input-link" src="assets/input-link.svg" alt="">
+    <input class="link-input" id="link-input" type="text" autocomplete="off" autocapitalize="off" spellcheck="false" aria-label="spotify or youtube link">
+  </div>
+
+  <div class="tutorial">
+    <img class="close-tutorial" src="assets/close-tutorial.svg" alt="">
+    <img class="tutorial-bubble" src="assets/tutorial-bubble.svg" alt="">
+  </div>
+
+  <div class="queue">
+    <img class="queue-bg" src="assets/queue-bg.svg" alt="">
+    <div class="queue-list" id="queue-list"></div>
+  </div>
+</div>
+
+
+<script src="script.js"></script>
+</body>
+</html>

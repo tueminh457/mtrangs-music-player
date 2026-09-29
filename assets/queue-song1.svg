@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 364.95 55.9">
+  <defs>
+    <filter id="luminosity-invert" x="-2.77" y="-2.74" width="370" height="61" color-interpolation-filters="sRGB" filterUnits="userSpaceOnUse">
+      <feColorMatrix result="cm" values="-1 0 0 0 1 0 -1 0 0 1 0 0 -1 0 1 0 0 0 1 0"/>
+    </filter>
+    <mask id="mask" x="-2.77" y="-2.74" width="370" height="61" maskUnits="userSpaceOnUse">
+      <g filter="url(#luminosity-invert)">
+        <image width="370" height="61" transform="translate(-2.77 -2.74)" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAXIAAAA9CAYAAACwXeIEAAAACXBIWXMAAAsSAAALEgHS3X78AAAFH0lEQVR4nO3cbU/aahzH8V/voQU7mEYNDxb3/l/VTDZhs9xIWyhtOY96nYKyLcczscv3kzSi62XwyXf/XG2xJO0FAOgs+9xvAADwOu7xD66urjQajRSGoXzfl+u6cl1XlmWZQ5L5CgB4nf1+b742R1VVKstSu91OWZZpsVjo4eHhxfUHIZ9MJrq7u9PNzY3iONZgMFAQBPJ9X47jyLbtZ0EHAPx3xxGv61p1XasoChVFoTzPtVqtNJvN9OHDB02nU83n84PfYUJ+dXWlu7s7ff78WZPJRJeXl4rjWFEUmcnccRxCDgD/s+NJvKoqE/H1eq35fK7RaKR+vy9Jp0M+Go10c3OjyWSiT58+6fr6WqPRSFEUqdfrEXIA+EPaIa/rWmVZqigKZVmm1WqlJEnU6/UkSXmeaz6fazqdmvUm5GEYKo5jXV5e6vr6Wre3txqPx2Z7xXEcE/KGbXOtFABeo65r87oJeXsiHw6HCoJAVVUpz3P9+PHDbLE0TMh939dgMFAcxxqNRhqPxxqPx4qiSJ7nmf1xAMCf1Uzl/X5fnudpv9+bC57D4dBssTRMyF3XVRAEiqJIURRpMBgoiiIFQUDAAeAN2bZtbjLZ7/fabDYaDocKw1D9fl++7x+e37xwXVe+78v3ffV6PQVBIM/ziDgAnInjOAqCQP1+/6DLjuMcnGdCblmWHMcx9403txsCAM7HdV15nmcGbdd1n7X5IOS2bZuLmscXNgEAb689ZJ9q80HIjw8AwHk1Q/bx0WYfLyDiAPB+tLvcfrq+7eREDgB4P372OVcnr2ZyoRMAzu93PqyQWgNAB7RjfnJrBQDwvjGRA8BfipADQMcRcgDoOEIOAB1HyAHgnfvVsz2EHAA6jpADQMcRcgDoOEIOAB1HyAGg4wg5AHQcIQeAjiPkANBxhBwAOo6QA0DHEXIA6DhCDgAdR8gBoOMIOQB0HCEHgI4j5ADwzu33+5/+OyEHgI4j5ADQcYQcADqOkANAR5zaKyfkANAhL8XcPj6hOamu67d5VwCAX2oH/Djm9u+cBAA4j/aA/VtbK82C9kIAwHn9qs328Yl1XbOtAgDvRLvNp2J+EPIm4s3BVA4A53Xc5qqqng3bJuRVVamqKpVlaQ4mcwA4rybeZVmaiJ+cyOu6VlEUB0dVVW/+pgEA/6qqSrvdznT5pSHbhLwsSxVFoSzLlKapsixTnufEHADOpCxLbTYb5XmuzWaj7Xb74pDtNi92u53SNFWaplqtVrq4uFAQBLIsS71eT67ryrZ5fggA/rS6rk3E0zTVer3W09OT0jRVnufa7XYH55uQZ1mm1WqlJEkUx7F6vZ4sy1JRFArDUL7vy3Ec2bYty7JM1C3Letu/EAD+Mu0HMZs98WaHZLVa6fHxUUmSaLFY6OnpSXmeH6w3IV8sFnp8fNRsNlO/3zcRv7i4UBiGCoLATOVNzCVCDgCv1b6tsLnxZLvdKssyLZdLJUmi6XSq2WymJEm0XC4P1puQT6dTffz4UUEQSJI2m42Wy6UGg4GZyNshb8e8jbADwM8d33XSvk+8CXkzka/XaxPyL1++6P7+Xt++fTtY77a/+fr1q/mfYLFYHEzjnucdbK00x0uIOQA8d+rZnPZE3myt7HY7bbdb5Xmu5XKp79+/6/7+XrPZ7Nl6S9Kz33x7e6s4jhVFkTzPk+u6chznWcAJNgC8XvuzVJqjuW+8KAptNhslSaKHh4cX178YcgBAd3A/IQB0HCEHgI77B/BdunD4yV+AAAAAAElFTkSuQmCC"/>
+      </g>
+    </mask>
+  </defs>
+  <g isolation="isolate">
+    <g id="Layer_2" data-name="Layer 2">
+      <g id="Layer_3" data-name="Layer 3">
+        <g id="queue-song1">
+          <g>
+            <rect width="364.95" height="55.9" rx="6.34" ry="6.34" fill="#c3b6d3"/>
+            <g mask="url(#mask)">
+              <g mix-blend-mode="multiply" opacity=".75">
+                <rect width="364.95" height="55.9" rx="6.34" ry="6.34" fill="#a08cb5"/>
+              </g>
+            </g>
+          </g>
+          <text transform="translate(71.07 34.84)" fill="#fff" font-family="ArialNarrow, &apos;Arial Narrow&apos;" font-size="25" opacity=".7"><tspan x="0" y="0">khuc hat mung sinh nhat </tspan></text>
+          <g opacity=".7">
+            <path d="M37.28,20.58v11.6c-.67-.6-1.56-.97-2.54-.97-2.1,0-3.82,1.71-3.82,3.82s1.71,3.82,3.82,3.82,3.81-1.71,3.82-3.81h0v-9.32l11.35-2.88v6.26c-.67-.6-1.56-.97-2.54-.97-2.1,0-3.82,1.71-3.82,3.82s1.71,3.82,3.82,3.82,3.82-1.71,3.82-3.82v-14.89l-13.91,3.53Z" data-original="#000000" fill="#fff"/>
+          </g>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>
