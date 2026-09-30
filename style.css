@@ -619,3 +619,201 @@ html, body{
   filter: grayscale(1) opacity(0.4);
   cursor: not-allowed;
 }
+
+
+/*==========================================*/
+/*=========PHONE: PORTRAIT (added media queries)======*/
+/* Only overrides for phone-sized screens; nothing above is changed.
+   --u is one "phone unit": 1vw, but capped by the height (0.5 x visible
+   height) so short phones shrink the layout instead of overflowing.
+   The music player is laid out as one 96u x 200u card, centred on screen. */
+@media (max-width: 600px) and (orientation: portrait){
+  :root{
+    --pv: 1vh;
+    --u: min(1vw, calc(var(--pv) / 2));
+    --ly: calc(50 * var(--pv) - 100 * var(--u));      /* top edge of the card */
+    --song-w: calc(68 * var(--u));
+    --song-h: calc(var(--song-w) * 55.9 / 364.95);
+
+    --lg-pw: min(66vw, 330px);                        /* password field width */
+    --lg-eb: max(44px, 11vw);                         /* enter button width   */
+    --lg-gap: 8px;
+  }
+  @supports (height: 1dvh){
+    :root{ --pv: 1dvh; }
+  }
+
+  /* ---------- log in page ---------- */
+  .pfp{ top: 26%; width: clamp(90px, 30vw, 140px); }
+  .log-in-page .logging-in,
+  .log-in-page .user,
+  .log-in-page .hint{ white-space: nowrap; }
+  .log-in-page .logging-in{ top: 41%; width: auto; }   /* base sets a 100px width meant for an image */
+  .log-in-page .user{ top: 50%; }
+  .log-in-page .hint{ top: 78%; }
+
+  .password,
+  .password-input{
+    left: calc(50% - (var(--lg-eb) + var(--lg-gap)) / 2);
+    width: var(--lg-pw);
+  }
+  .password-input{
+    height: calc(var(--lg-pw) * 126.72 / 660.96);
+    font-size: 18px;                                  /* 16px+ stops iOS zooming in on focus */
+  }
+  .enter-btn{
+    left: calc(50% + (var(--lg-pw) + var(--lg-gap)) / 2);
+    width: var(--lg-eb);
+  }
+
+  /* ---------- music player page ---------- */
+  .app{ left: 16%; top: 12%; width: clamp(56px, 18vw, 80px); }
+  body:has(.music-player.open) .app{ visibility: hidden; }   /* the card covers the whole screen once open */
+
+  /* window: the wide window art doesn't fit a portrait screen, so the card is drawn with CSS */
+  .window{
+    inset: auto;
+    left: calc(50% - 48 * var(--u));
+    top: var(--ly);
+    width: calc(96 * var(--u));
+    height: calc(200 * var(--u));
+    box-sizing: border-box;
+    background: rgba(207, 186, 226, 0.5);
+    border: 1px solid #b79ac8;
+    border-radius: calc(6 * var(--u));
+    box-shadow: 0 6px 24px rgba(120, 90, 150, 0.35);
+  }
+  .window-screen,
+  .window-small{ display: none; }
+  .window-overlay{
+    left: calc(50% + 12 * var(--u));
+    top: calc(var(--ly) + 132 * var(--u));
+    width: calc(70 * var(--u));
+    height: auto;
+  }
+  .window p{
+    left: 50%;
+    top: calc(var(--ly) + 7.5 * var(--u));
+    width: calc(90 * var(--u));
+    font-size: calc(4.6 * var(--u));
+    margin: 0;
+  }
+
+  /* cd */
+  .music-bg{ left: 50%; top: calc(var(--ly) + 45 * var(--u)); width: calc(72 * var(--u)); }
+  .cd{ left: 50%; top: calc(var(--ly) + 45 * var(--u)); width: calc(58 * var(--u)); }
+  .title-placeholder{ left: 50%; top: calc(var(--ly) + 26 * var(--u)); width: calc(32 * var(--u)); }
+
+  /* transport + volume */
+  .buttons img{
+    top: calc(var(--ly) + 87 * var(--u));
+    width: calc(13 * var(--u));
+  }
+  .buttons .previous-btn{ left: calc(50% - 26 * var(--u)); }
+  .buttons .play-btn,
+  .buttons .pause-btn{ left: 50%; }
+  .buttons .next-btn{ left: calc(50% + 26 * var(--u)); }
+  .buttons .speaker-btn{
+    width: calc(7 * var(--u));
+    left: calc(50% - 32 * var(--u));
+    top: calc(var(--ly) + 103 * var(--u));
+  }
+  .buttons .volume-btn{
+    width: calc(52 * var(--u));
+    left: calc(50% + 6 * var(--u));
+    top: calc(var(--ly) + 103 * var(--u));
+  }
+
+  /* queue: the tall queue art becomes a CSS panel with the same header */
+  .queue-bg{ display: none; }
+  .queue{
+    left: calc(50% - 38 * var(--u));
+    top: calc(var(--ly) + 111 * var(--u));
+    width: calc(76 * var(--u));
+    height: calc(47 * var(--u));
+    box-sizing: border-box;
+    background: rgba(207, 186, 226, 0.55);
+    border: 1px solid #b79ac8;
+    border-radius: calc(4.5 * var(--u));
+  }
+  .queue::before{
+    content: "queue <3";
+    position: absolute;
+    left: -1px;
+    right: -1px;
+    top: -1px;
+    height: calc(8.5 * var(--u));
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: calc(0.6 * var(--u));
+    background: #cfbae2;
+    border: 1px solid #b79ac8;
+    border-radius: calc(4.5 * var(--u)) calc(4.5 * var(--u)) 0 0;
+    color: #fff;
+    font-family: var(--font-ui);
+    font-size: calc(5 * var(--u));
+    line-height: 1;
+  }
+  .queue-list{
+    left: 50%;
+    top: calc(var(--ly) + 119.5 * var(--u));
+    width: calc(var(--song-w) + 16px);
+    max-height: calc(38 * var(--u));
+    padding: calc(1 * var(--u)) 8px;
+  }
+  .queue-row{ margin: 0 0 calc(2 * var(--u)); }
+
+  /* link input + load music */
+  .input-link,
+  .link-input,
+  .load-music{ left: 50%; width: calc(68 * var(--u)); }
+  .input-link,
+  .link-input{ top: calc(var(--ly) + 178 * var(--u)); }
+  .link-input{
+    height: calc(68 * var(--u) * 52.43 / 402.63);
+    font-size: 16px;                                  /* 16px+ stops iOS zooming in on focus */
+  }
+  .load-music{ top: calc(var(--ly) + 189 * var(--u)); }
+
+  /* tutorial bubble */
+  .tutorial-bubble{ left: 50%; top: calc(var(--ly) + 167 * var(--u)); width: calc(54 * var(--u)); }
+  .close-tutorial{
+    left: calc(50% + 28 * var(--u));
+    top: calc(var(--ly) + 161 * var(--u));
+    width: clamp(32px, calc(9 * var(--u)), 40px);
+  }
+}
+
+
+/*==========================================*/
+/*=========PHONE: LANDSCAPE=================*/
+/* Short wide screens keep the desktop layout; only the pieces that collide are adjusted. */
+@media (orientation: landscape) and (max-height: 500px){
+  :root{
+    --lw: clamp(200px, 26vw, 420px);      /* password field width */
+    --lb: clamp(34px, 12vh, 56px);        /* enter button width   */
+  }
+
+  /* ----- log in page ----- */
+  .pfp{ top: 24%; width: clamp(70px, 24vh, 120px); }
+  .log-in-page .logging-in,
+  .log-in-page .user{ white-space: nowrap; }
+  .log-in-page .logging-in{ top: 46%; width: auto; font-size: clamp(18px, 6vh, 26px); }
+  .log-in-page .user{ top: 58%; font-size: clamp(13px, 4.4vh, 18px); }
+  .password,
+  .password-input{ top: 76%; width: var(--lw); }
+  .password-input{ height: calc(var(--lw) * 126.72 / 660.96); }
+  .enter-btn{
+    top: 76%;
+    width: var(--lb);
+    left: calc(50% + var(--lw) / 2 + 10px + var(--lb) / 2);
+  }
+  .log-in-page .hint{ top: 91%; font-size: clamp(10px, 3.4vh, 14px); }
+
+  /* ----- music player: keep the cd clear of the title, stop queue rows overlapping ----- */
+  .music-bg{ width: min(27vw, 62vh); }
+  .cd{ width: min(25vw, 56vh); }
+  .queue-row{ margin: 0 0 6px; }
+}
